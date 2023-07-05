@@ -1,51 +1,45 @@
 body {
-    height: 100vh;
-    display: flex;
-    align-items: start;
-    justify-content: center;
-    background-color:grey;
+  height: 100vh;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  background-color: rgb(44, 44, 44);
 }
 
 button {
-    font-family: myunique2, Arial, Helvetica, sans-serif;
-    color: black;
-    border: none;
-    text-decoration: none;
-    position: relative;
-    display: inline-block;
-    padding: 10px 10px;
-    margin: 0;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: 0.5s;
-    letter-spacing: 4px;
-    overflow: hidden;
-    background: linear-gradient(90deg, transparent, #03e9f4);
-    animation: nav-item-animate1 1s linear infinite;
+  font-family: myunique2, Arial, Helvetica, sans-serif;
+  color: #03e9f4;
+  border: none;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding: 10px 10px;
+  margin: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: none;
+  animation: nav-item-animate1 1s linear infinite;
 }
 
 button:hover {
-    cursor: pointer;
-    color: white;
-    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 42px white, 0 0 82px white,
-      0 0 92px white;
-      background: #03e9f4;
-      color: #050801;
-      box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
-        0 0 200px #03e9f4;
-      -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
-  }
-
-.box {
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  width:100px;
-  height:100px;
-  background:grey;
-  text-align:center;
+  cursor: pointer;
+  color: white;
+  text-shadow: 0 0 10px white, 0 0 20px white, 0 0 42px white, 0 0 82px white,
+    0 0 92px white;
+  background: #03e9f4;
+  color: #050801;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+    0 0 200px #03e9f4;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
 
 .active {
-  background: white;
+  background: none;
+  overflow: visible;
+  color: white;
+  text-shadow: 0 0 10px white, 0 0 20px white, 0 0 42px white, 0 0 82px white,
+    0 0 92px white;
 }
