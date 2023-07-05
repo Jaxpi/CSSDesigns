@@ -9,6 +9,7 @@ body {
   align-items: start;
   flex-direction: column;
   background-color: rgb(44, 44, 44);
+  font-size: 24px;
 }
 
 nav,
@@ -75,7 +76,7 @@ button:hover {
     0 0 92px white;
 }
 
-.active2 {
+#nav-group2 a.active2 {
   background: red;
   box-shadow: 0 -15px 50px 10px red;
   color: white;
