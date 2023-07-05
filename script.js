@@ -1,25 +1,25 @@
-// const buttonGroup = document.getElementById("buttons1"); 
-// let prevButton = null;
-// const buttonPressed = (e) => {
-//   if(e.target.nodeName === 'BUTTON') {
-//     e.target.classList.add('active'); 
-//     if(prevButton !== null) {
-//       prevButton.classList.remove('active');  
-//     }
-//     prevButton = e.target;
-//   }
-// }
-// buttonGroup.addEventListener("click", buttonPressed);
-
-const navGroup = document.getElementById("nav-group"); 
-let prevButton = null;
-const buttonPressed = (e) => {
+const navGroup1 = document.getElementById("nav-group1"); 
+let prevButton1 = null;
+const buttonPressed1 = (e) => {
   if(e.target.nodeName === 'BUTTON') {
-    e.target.classList.add('active'); 
-    if(prevButton !== null) {
-      prevButton.classList.remove('active');  
+    e.target.classList.add('active1'); 
+    if(prevButton1 !== null) {
+      prevButton1.classList.remove('active1');  
     }
-    prevButton = e.target;
+    prevButton1 = e.target;
   }
 }
-navGroup.addEventListener("click", buttonPressed);
+navGroup1.addEventListener("click", buttonPressed1);
+
+const navGroup2 = document.getElementById("nav-group2"); 
+let prevButton2 = null;
+const buttonPressed2 = (e) => {
+    if (e.target.nodeName === 'A') {
+    e.target.classList.add('active2'); 
+    if(prevButton2 !== null) {
+      prevButton2.classList.remove('active2');  
+    }
+    prevButton2 = e.target;
+  }
+}
+navGroup2.addEventListener("click", buttonPressed2);

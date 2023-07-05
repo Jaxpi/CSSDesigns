@@ -1,13 +1,24 @@
+@font-face {
+  font-family: myunique1;
+  src: url(/assets/KGAllofMe.ttf);
+}
+
 body {
   height: 100vh;
   display: flex;
   align-items: start;
-  justify-content: center;
+  flex-direction: column;
   background-color: rgb(44, 44, 44);
 }
 
+nav,
+div {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
 button {
-  font-family: myunique2, Arial, Helvetica, sans-serif;
+  font-family: myunique1, Arial, Helvetica, sans-serif;
   color: #03e9f4;
   border: none;
   text-decoration: none;
@@ -15,7 +26,6 @@ button {
   display: inline-block;
   padding: 10px 10px;
   margin: 10px;
-  text-decoration: none;
   text-transform: uppercase;
   transition: 0.5s;
   letter-spacing: 4px;
@@ -36,9 +46,38 @@ button:hover {
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
 
-.active {
+.active1 {
   background: none;
   overflow: visible;
+  color: white;
+  text-shadow: 0 0 10px white, 0 0 20px white, 0 0 42px white, 0 0 82px white,
+    0 0 92px white;
+}
+
+#nav-group2 a {
+  font-family: Arial, Helvetica, sans-serif;
+  color: red;
+  text-shadow: 0 0 10px red, 0 0 20px red, 0 0 42px red, 0 0 82px red,
+    0 0 92px red;
+  padding: 10px 10px;
+  margin: 10px;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  overflow: visible;
+}
+
+#nav-group2 a:hover {
+  cursor: pointer;
+  overflow: visible;
+  color: white;
+  text-shadow: 0 0 10px white, 0 0 20px white, 0 0 42px white, 0 0 82px white,
+    0 0 92px white;
+}
+
+.active2 {
+  background: red;
+  box-shadow: 0 -15px 50px 10px red;
   color: white;
   text-shadow: 0 0 10px white, 0 0 20px white, 0 0 42px white, 0 0 82px white,
     0 0 92px white;
