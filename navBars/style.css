@@ -11,13 +11,34 @@ body {
   background-color: rgb(44, 44, 44);
 }
 
+#homeButton {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 2px 2px white;
+  font-size: 24px;
+  border: none;
+  transition: 0.5s;
+  background: white;
+}
+
+#homeButton:hover {
+  cursor: pointer;
+  color: white;
+  text-shadow: none;
+  background: none;
+  box-shadow: none;
+  -webkit-box-reflect: none;
+}
+
 nav,
 div {
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
-button {
+#nav-group1 a {
   font-family: myunique1, Arial, Helvetica, sans-serif;
   font-size: 24px;
   color: #03e9f4;
@@ -35,7 +56,7 @@ button {
   animation: nav-item-animate1 1s linear infinite;
 }
 
-button:hover {
+#nav-group1 a:hover {
   cursor: pointer;
   color: white;
   text-shadow: 0 0 10px white, 0 0 20px white, 0 0 42px white, 0 0 82px white,
@@ -85,26 +106,4 @@ button:hover {
   overflow: visible;
   text-shadow: 0 0 10px white, 0 0 20px white, 0 0 42px white, 0 0 82px white,
     0 0 92px white;
-}
-
-#homeButton {
-  font-family: Arial, Helvetica, sans-serif;
-  color: black;
-  font-weight: bold;
-  text-decoration: none;
-  text-shadow: 2px 2px white;
-  font-size: 24px;
-  border: none;
-  transition: 0.5s;
-  letter-spacing: 4px;
-  background: none;
-}
-
-#homeButton:hover {
-  cursor: pointer;
-  color: white;
-  text-shadow: none;
-  background: none;
-  box-shadow: none;
-  -webkit-box-reflect: none;
 }
