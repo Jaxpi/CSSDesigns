@@ -12,30 +12,29 @@ body {
 }
 
 #homeButton {
+  margin: 20px;
+}
+
+#homeButton a {
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
   color: black;
-  font-weight: bold;
-  text-decoration: none;
-  text-shadow: 2px 2px white;
-  font-size: 24px;
-  border: none;
-  transition: 0.5s;
   background: white;
+  text-decoration: none;
 }
 
 #homeButton:hover {
   cursor: pointer;
-  color: white;
+  scale: 102%;
   text-shadow: none;
-  background: none;
-  box-shadow: none;
-  -webkit-box-reflect: none;
+  box-shadow: 2px 2px black;
 }
 
-nav,
-div {
-  margin-top: 30px;
-  margin-bottom: 30px;
+nav {
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 #nav-group1 a {
@@ -51,7 +50,7 @@ div {
   text-transform: uppercase;
   transition: 0.5s;
   letter-spacing: 4px;
-  overflow: hidden;
+  overflow: visible;
   background: none;
   animation: nav-item-animate1 1s linear infinite;
 }
@@ -68,12 +67,17 @@ div {
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
 
-.active1 {
+#nav-group1 a.active1 {
   background: none;
   overflow: visible;
   color: white;
   text-shadow: 0 0 10px white, 0 0 20px white, 0 0 42px white, 0 0 82px white,
     0 0 92px white;
+}
+
+#nav-group1 a.active1:hover {
+  box-shadow: 0 0 5px white, 0 0 25px white, 0 0 50px white,
+  0 0 200px white;
 }
 
 #nav-group2 a {
@@ -106,4 +110,30 @@ div {
   overflow: visible;
   text-shadow: 0 0 10px white, 0 0 20px white, 0 0 42px white, 0 0 82px white,
     0 0 92px white;
+}
+
+#nav-group3 a {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  min-width: 150px;
+  color: black;
+  padding: 10px 10px;
+  margin: 10px;
+  background: radial-gradient(white, transparent);
+}
+
+#nav-group3 a:hover {
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px white;
+}
+
+#nav-group3 a.active3 {
+  text-transform: uppercase;
+  background: blue;
+  box-shadow: 0 0 5px blue, 0 0 20px blue;
+  color: white;
+  overflow: visible;
 }

@@ -23,3 +23,16 @@ const buttonPressed2 = (e) => {
   }
 }
 navGroup2.addEventListener("click", buttonPressed2);
+
+const navGroup3 = document.getElementById("nav-group3"); 
+let prevButton3 = null;
+const buttonPressed3 = (e) => {
+    if (e.target.id === "nav-group3") {
+    e.target.classList.add('active3'); 
+    if(prevButton3 !== null) {
+      prevButton3.classList.remove('active3');  
+    }
+    prevButton3 = e.target;
+  }
+}
+navGroup3.addEventListener("click", buttonPressed3);
