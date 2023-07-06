@@ -1,0 +1,110 @@
+@font-face {
+  font-family: myunique1;
+  src: url(/assets/KGAllofMe.ttf);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  background-color: rgb(44, 44, 44);
+}
+
+nav,
+div {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+button {
+  font-family: myunique1, Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  color: #03e9f4;
+  border: none;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding: 10px 10px;
+  margin: 10px;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: none;
+  animation: nav-item-animate1 1s linear infinite;
+}
+
+button:hover {
+  cursor: pointer;
+  color: white;
+  text-shadow: 0 0 10px white, 0 0 20px white, 0 0 42px white, 0 0 82px white,
+    0 0 92px white;
+  background: #03e9f4;
+  color: #050801;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+    0 0 200px #03e9f4;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+.active1 {
+  background: none;
+  overflow: visible;
+  color: white;
+  text-shadow: 0 0 10px white, 0 0 20px white, 0 0 42px white, 0 0 82px white,
+    0 0 92px white;
+}
+
+#nav-group2 a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: red;
+  text-shadow: 0 0 10px red, 0 0 20px red, 0 0 42px red, 0 0 82px red,
+    0 0 92px red;
+  padding: 10px 10px;
+  margin: 10px;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 2px;
+  overflow: visible;
+}
+
+#nav-group2 a:hover {
+  cursor: pointer;
+  overflow: visible;
+  color: white;
+  text-shadow: 0 0 10px white, 0 0 20px white, 0 0 42px white, 0 0 82px white,
+    0 0 92px white;
+}
+
+#nav-group2 a.active2 {
+  background: red;
+  box-shadow: 0 0 5px red, 0 0 20px red, 0 0 30px red,
+  0 0 200px red;
+  color: white;
+  overflow: visible;
+  text-shadow: 0 0 10px white, 0 0 20px white, 0 0 42px white, 0 0 82px white,
+    0 0 92px white;
+}
+
+#homeButton {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 2px 2px white;
+  font-size: 24px;
+  border: none;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  background: none;
+}
+
+#homeButton:hover {
+  cursor: pointer;
+  color: white;
+  text-shadow: none;
+  background: none;
+  box-shadow: none;
+  -webkit-box-reflect: none;
+}
