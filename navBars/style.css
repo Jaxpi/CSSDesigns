@@ -126,14 +126,31 @@ nav {
 #nav-group3 a:hover {
   cursor: pointer;
   font-weight: bold;
-  text-transform: uppercase;
   text-shadow: 0 0 10px white;
 }
 
 #nav-group3 a.active3 {
-  text-transform: uppercase;
   background: blue;
   box-shadow: 0 0 5px blue, 0 0 20px blue;
   color: white;
+  font-weight: bold;
   overflow: visible;
+}
+
+#nav-group4 {
+  background: linear-gradient(90deg, rgb(136, 0, 255), rgb(0, 255, 0));
+}
+
+#nav-group4 a {
+  margin: 50px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(255, 170, 0);
+  -webkit-text-stroke: 1px black;
+}
+
+#nav-group4 a:hover {
+  cursor: pointer;
+  text-shadow: 2px 2px black;
 }
