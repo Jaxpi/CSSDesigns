@@ -11,8 +11,8 @@
   <body>
     <button id="homeButton"><a href="../index.html">Home</a></button>
 
-    <div id="form1">
-        <button class="open-button" onclick="openForm()">Open Form</button>
+    <div class="formContainer" id="form1">
+        <button class="open-button" onclick="openForm()">Sign In</button>
 
         <div class="form-popup" id="myForm">
           <form action="/action_page.php" class="form-container">
@@ -32,6 +32,39 @@
             <button type="submit" class="btn">Login</button>
             <button type="button" class="btn cancel" onclick="closeForm()">
               Close
+            </button>
+          </form>
+        </div>
+    </div>
+
+    <div class="formContainer" id="form2">
+        <button class="open-button2" onclick="openForm2()">Sign Up</button>
+
+        <div class="form-popup2" id="myForm2">
+          <form action="/action_page.php" class="form-container2">
+    
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required />
+    
+            <label for="psw"><b>Password</b></label>
+            <input
+              type="password"
+              placeholder="Enter Password"
+              name="psw"
+              required
+            />
+
+            <label for="un"><b>Username</b></label>
+            <input
+              type="text"
+              placeholder="Enter Username"
+              name="un"
+              required
+            />
+    
+            <button type="submit" class="btn2">Join</button>
+            <button type="button" class="btn2 cancel2" onclick="closeForm2()">
+              Cancel
             </button>
           </form>
         </div>
