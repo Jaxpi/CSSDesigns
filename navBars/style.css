@@ -19,7 +19,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   color: black;
-  background: white;
   text-decoration: none;
 }
 
@@ -36,6 +35,8 @@ nav {
   margin-top: 40px;
   margin-bottom: 40px;
 }
+
+/* NAV GROUP 1 */
 
 #nav-group1 a {
   font-family: myunique1, Arial, Helvetica, sans-serif;
@@ -80,6 +81,8 @@ nav {
   0 0 200px white;
 }
 
+/* NAV GROUP 2 */
+
 #nav-group2 a {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
@@ -112,6 +115,8 @@ nav {
     0 0 92px white;
 }
 
+/* NAV GROUP 3 */
+
 #nav-group3 a {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
@@ -136,6 +141,8 @@ nav {
   font-weight: bold;
   overflow: visible;
 }
+
+/* NAV GROUP 4 */
 
 #nav-group4 {
   background: linear-gradient(90deg, rgb(0, 255, 0), rgb(136, 0, 255));
@@ -182,6 +189,125 @@ nav {
 
 #nav-group4 .login-container button:hover {
   background: #ccc;
+}
+
+/* NAV GROUP 5 */
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+#nav-group5 {
+  max-width: 98vw;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.layout {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  justify-content: space-around;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.categories1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 98vw;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+#dashNav {
+	margin-top: -20px;
+}
+
+.block1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: fit-content;
+  margin: auto;
+  background: linear-gradient(0deg, #000, #272727);
+}
+
+.block1:before,
+.block1:after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(
+    45deg,
+    #00b4fb,
+    #0000ff,
+    #00c288,
+    #1495ff,
+    #00b652,
+    #0000ff,
+    #2f00ff
+  );
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 20s linear infinite;
+}
+
+.block1:after {
+  filter: blur(50px);
+}
+
+.nav5Title {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 80px;
+  font-weight: lighter;
+  filter: drop-shadow(5px 5px 5px black);
+  margin-right: 50px;
+}
+
+.button,
+.logout {
+  background-color: black;
+  padding: 1rem;
+  color: #fff;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1rem;
+  &:hover {
+    filter: brightness(110%);
+  }
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+}
+
+.button:hover {
+  scale: 105%;
 }
 
 /* Add responsiveness - On small screens, display the navbar vertically instead of horizontally */
