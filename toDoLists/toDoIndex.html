@@ -8,12 +8,18 @@
   </head>
   <body>
     <button id="homeButton"><a href="../index.html">Home</a></button>
+    <br>
+<div class="centerContainer">
+  <video id="background-video" autoplay loop muted poster="../assets/backVid.mp4">
+    <source src="/assets/backVid.mp4" type="video/mp4">
+  </video>
+  <button id="style-toggle">Toggle Style By Clicking Here</button>
+</div>
 
-    <button id="style-toggle">Toggle Style</button>
 
     <div class="container1" id="container1">
       <div class="card">
-        <header class="jumbotron">
+        <header class="jumbotron" id="jumbotron">
           <h1>My To-Do List</h1>
           <p id="currentDay" class="lead"></p>
         </header>
