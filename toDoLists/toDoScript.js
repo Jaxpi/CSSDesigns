@@ -1,93 +1,101 @@
 // Displays current date and time on page
 window.setInterval(function () {
-    $("#currentDay").text(moment().format("MMMM Do YYYY, h:mm:ss a"));
-  }, 1000);
-  
-  var todoInput = document.querySelector("#todo-text");
-  var todoForm = document.querySelector("#todo-form");
-  var todoList = document.querySelector("#todo-list");
-  
-  var todos = [];
-  
-  // Shows the results of the inputs
-  function renderTodos() {
-    // Blanks out the input form, and creates the count for todos
-    todoList.innerHTML = "";
-  
-    // For each todo added, creates a list item, adds to index, and a button after it saying complete
-    for (var i = 0; i < todos.length; i++) {
-      var todo = todos[i];
-  
-      var li = document.createElement("li");
-      li.textContent = todo;
-      li.setAttribute("data-index", i);
-  
-      var button = document.createElement("BUTTON");
-      var txt = document.createTextNode("\u00D7");
-      button.className = "close";
-      button.appendChild(txt);
-      li.appendChild(button);
-  
-      todoList.appendChild(li);
+  $("#currentDay").text(moment().format("MMMM Do YYYY, h:mm:ss a"));
+}, 1000);
+
+// Get references to the relevant elements
+const todoForm = document.getElementById("todo-form");
+const todoInput = document.getElementById("todo-text");
+const todoList = document.getElementById("todo-list");
+
+// Load existing items from local storage (if any)
+const savedItems = JSON.parse(localStorage.getItem("todoItems")) || [];
+
+// Function to render the list items
+function renderTodoItems() {
+  todoList.innerHTML = "";
+  savedItems.forEach((item, index) => {
+    const li = document.createElement("li");
+    li.textContent = item.text;
+    li.dataset.index = index;
+    li.draggable = true; // Make the list item draggable
+
+    // Add a delete button
+    const deleteButton = document.createElement("button");
+      deleteButton.textContent = "x";
+      deleteButton.className = "close"
+    deleteButton.addEventListener("click", deleteTodoItem);
+    li.appendChild(deleteButton);
+
+    // Mark as checked if needed
+    if (item.checked) {
+      li.classList.add("checked");
     }
-  }
-  
-  // Starts on refresh with stored todos
-  function init() {
-    // Get stored info and parse it to objects, and save to storedtodos
-    var storedTodos = JSON.parse(localStorage.getItem("todos"));
-    // Makes stored todos into todos (current for user)
-    if (storedTodos !== null) {
-      todos = storedTodos;
-    }
-    // Displays on page
-    renderTodos();
-  }
-  
-  function storeTodos() {
-    // Takes todos and stores them as string
-    localStorage.setItem("todos", JSON.stringify(todos));
-  }
-  // Tells when user clicks on submit and stops from infinite repeat, removes beginning and ending spaces from whatever put in form
-  todoForm.addEventListener("submit", function (event) {
-    event.preventDefault();
-    var todoText = todoInput.value.trim();
-    // If nothing is written don't do anything
-    if (todoText === "") {
-      return;
-    }
-    // Whatever valid is inputted gets saved as text in array for todos and re-sets form to blank
-    todos.push(todoText);
+
+    // Toggle checked state on click
+    li.addEventListener("click", toggleChecked);
+
+    // Add drag-and-drop event listeners
+    li.addEventListener("dragstart", handleDragStart);
+    li.addEventListener("dragover", handleDragOver);
+    li.addEventListener("drop", handleDrop);
+
+    todoList.appendChild(li);
+  });
+}
+
+// Function to add a new item
+function addTodoItem(e) {
+  e.preventDefault();
+  const text = todoInput.value.trim();
+  if (text) {
+    savedItems.push({ text, checked: false });
+    localStorage.setItem("todoItems", JSON.stringify(savedItems));
+    renderTodoItems();
     todoInput.value = "";
-  
-    // Takes all inputs and puts into local storage, shows local stored todos on screen (updates with new inputs)
-    storeTodos();
-    renderTodos();
-  });
-  
-  // When click on todo item button complete...
-  todoList.addEventListener("click", function (event) {
-    var element = event.target;
-    // Click on button takes info on which item was clicked, and replaces next item to that spot (changes the array index to match the items left)
-    if (element.matches("button") === true) {
-      var index = element.parentElement.getAttribute("data-index");
-      todos.splice(index, 1);
-      // Takes all inputs and puts into local storage, shows local stored todos on screen
-      storeTodos();
-      renderTodos();
-    }
-  });
-  
-  // Add a "checked" symbol when clicking on a list item
-  var list = document.querySelector("ul");
-  list.addEventListener(
-    "click",
-    function (ev) {
-      if (ev.target.tagName === "LI") {
-        ev.target.classList.toggle("checked");
-      }
-    },
-    false
-  );
-  
-  init();
+  }
+}
+
+// Function to delete an item
+function deleteTodoItem(e) {
+  const index = e.target.closest("li").dataset.index;
+  savedItems.splice(index, 1);
+  localStorage.setItem("todoItems", JSON.stringify(savedItems));
+  renderTodoItems();
+}
+
+// Function to toggle checked state
+function toggleChecked(e) {
+  const index = e.target.closest("li").dataset.index;
+  savedItems[index].checked = !savedItems[index].checked;
+  localStorage.setItem("todoItems", JSON.stringify(savedItems));
+  renderTodoItems();
+}
+
+// Drag-and-drop event handlers
+let draggedItemIndex = null;
+
+function handleDragStart(e) {
+  draggedItemIndex = parseInt(e.target.dataset.index);
+}
+
+function handleDragOver(e) {
+  e.preventDefault();
+}
+
+function handleDrop(e) {
+  e.preventDefault();
+  const targetIndex = parseInt(e.target.dataset.index);
+  if (draggedItemIndex !== targetIndex) {
+    const [movedItem] = savedItems.splice(draggedItemIndex, 1);
+    savedItems.splice(targetIndex, 0, movedItem);
+    localStorage.setItem("todoItems", JSON.stringify(savedItems));
+    renderTodoItems();
+  }
+}
+
+// Event listener for form submission
+todoForm.addEventListener("submit", addTodoItem);
+
+// Initial rendering
+renderTodoItems();
