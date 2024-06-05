@@ -7,6 +7,36 @@ window.setInterval(function () {
 const todoForm = document.getElementById("todo-form");
 const todoInput = document.getElementById("todo-text");
 const todoList = document.getElementById("todo-list");
+const styleToggle = document.getElementById("style-toggle");
+const styleContainer = document.getElementById("container1");
+
+
+// Initialize with the default style and set new style upon click event
+let currentStyle = 1;
+
+styleToggle.addEventListener("click", () => {
+  const closeButtons = document.querySelectorAll(".close");
+
+  console.log("current style:", `style${currentStyle}`);
+
+  // Toggle between styles
+  currentStyle = (currentStyle % 3) + 1;
+  // Apply the style directly to the container and list items
+  styleContainer.classList.remove("style1", "style2", "style3");
+  styleContainer.classList.add(`style${currentStyle}`);
+
+  todoList.classList.remove("style1", "style2", "style3");
+  todoList.classList.add(`style${currentStyle}`);
+
+  // Apply the style to each button
+  closeButtons.forEach((button) => {
+    button.className = "close";
+    button.classList.remove("style1", "style2", "style3");
+    button.classList.add(`style${currentStyle}`);
+  });
+  
+  console.log("current style: ", `style${currentStyle}`)
+});
 
 // Load existing items from local storage (if any)
 const savedItems = JSON.parse(localStorage.getItem("todoItems")) || [];
@@ -22,11 +52,11 @@ function renderTodoItems() {
 
     // Add a delete button
     const deleteButton = document.createElement("button");
-      deleteButton.textContent = "x";
-      deleteButton.className = "close"
+    deleteButton.textContent = "x";
+    deleteButton.className = "close";
+    deleteButton.id = "delete-button";
     deleteButton.addEventListener("click", deleteTodoItem);
     li.appendChild(deleteButton);
-
     // Mark as checked if needed
     if (item.checked) {
       li.classList.add("checked");
