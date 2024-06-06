@@ -62,7 +62,7 @@
 
 /* STYLE 1 */
 
-.container1 {
+#container1.style1 {
   background-color: black;
   padding-bottom: 50px;
 }
@@ -73,7 +73,7 @@ h1 {
   text-align: center;
 }
 
-.jumbotron {
+#jumbotron.style1 {
   text-align: center;
   background-color: transparent;
   color: white;
@@ -242,7 +242,7 @@ ul.style2 li.checked {
   border: 1px solid white;
 }
 
-.jumbotron.style2 {
+#jumbotron.style2 {
   text-align: center;
   background-color: transparent;
   color: red;
@@ -250,6 +250,12 @@ ul.style2 li.checked {
   border: none;
   padding: 10px;
   text-shadow: 4px 4px 4px black;
+}
+
+#currentDay.style2 {
+  font-size: 24px;
+  padding: 0px;
+  margin: -10px 0px -10px;
 }
 
 /* STYLE 3 */
@@ -278,7 +284,7 @@ ul.style3 li {
 }
 
 ul.style3 li:nth-child(odd) {
-  background: linear-gradient(to right, rgb(0, 175, 175), cyan);
+  background: linear-gradient(to right, rgb(0, 195, 255), rgb(146, 239, 255));
 }
 
 ul.style3 li.checked {
@@ -316,7 +322,7 @@ ul.style3 li.checked {
   border-radius: 20px;
 }
 
-.jumbotron.style3 {
+#jumbotron.style3 {
   text-align: center;
   background-color: rgb(179, 179, 179);
   color: black;

@@ -9,35 +9,32 @@ const todoInput = document.getElementById("todo-text");
 const todoList = document.getElementById("todo-list");
 const styleToggle = document.getElementById("style-toggle");
 const styleContainer = document.getElementById("container1");
-const styleJumbotron = document.getElementById("jumbotron")
+const styleJumbotron = document.getElementById("jumbotron");
+const styleDate = document.getElementById("currentDay");
 
 // Initialize with the default style and set new style upon click event
 let currentStyle = 1;
 
+//NEW NEW NEW ***********************************
+const elementsToUpdate = [
+  styleContainer,
+  todoList,
+  todoForm,
+  todoInput,
+  styleJumbotron,
+  styleDate,
+];
+
+function applyStyle(style) {
+  elementsToUpdate.forEach((element) => {
+    element.className = `style${style}`;
+  });
+}
+
 styleToggle.addEventListener("click", () => {
-  const closeButtons = document.querySelectorAll(".close");
-
-  console.log("current style:", `style${currentStyle}`);
-
-  // Toggle between styles
   currentStyle = (currentStyle % 3) + 1;
-  // Apply the style directly to the container and list items
-  styleContainer.classList.remove("style1", "style2", "style3");
-  styleContainer.classList.add(`style${currentStyle}`);
-
-  todoList.classList.remove("style1", "style2", "style3");
-  todoList.classList.add(`style${currentStyle}`);
-
-  todoForm.classList.remove("style1", "style2", "style3");
-  todoForm.classList.add(`style${currentStyle}`);
-
-  todoInput.classList.remove("style1", "style2", "style3");
-  todoInput.classList.add(`style${currentStyle}`);
-
-  styleJumbotron.classList.remove("style1", "style2", "style3");
-  styleJumbotron.classList.add(`style${currentStyle}`);
-
-  // Apply the style to each button
+  applyStyle(currentStyle);
+  const closeButtons = document.querySelectorAll(".close");
   closeButtons.forEach((button) => {
     button.className = "close";
     button.classList.remove("style1", "style2", "style3");
@@ -46,6 +43,42 @@ styleToggle.addEventListener("click", () => {
   
   console.log("current style: ", `style${currentStyle}`)
 });
+
+// ********************************
+
+// styleToggle.addEventListener("click", () => {
+//   const closeButtons = document.querySelectorAll(".close");
+
+//   // Toggle between styles
+//   currentStyle = (currentStyle % 3) + 1;
+//   // Apply the style directly to the container and list items
+//   styleContainer.classList.remove("style1", "style2", "style3");
+//   styleContainer.classList.add(`style${currentStyle}`);
+
+//   todoList.classList.remove("style1", "style2", "style3");
+//   todoList.classList.add(`style${currentStyle}`);
+
+//   todoForm.classList.remove("style1", "style2", "style3");
+//   todoForm.classList.add(`style${currentStyle}`);
+
+//   todoInput.classList.remove("style1", "style2", "style3");
+//   todoInput.classList.add(`style${currentStyle}`);
+
+//   styleJumbotron.classList.remove("style1", "style2", "style3");
+//   styleJumbotron.classList.add(`style${currentStyle}`);
+
+//   styleDate.classList.remove("style1", "style2", "style3");
+//   styleDate.classList.add(`style${currentStyle}`);
+
+//   // Apply the style to each button
+//   closeButtons.forEach((button) => {
+//     button.className = "close";
+//     button.classList.remove("style1", "style2", "style3");
+//     button.classList.add(`style${currentStyle}`);
+//   });
+  
+//   console.log("current style: ", `style${currentStyle}`)
+// });
 
 // Load existing items from local storage (if any)
 const savedItems = JSON.parse(localStorage.getItem("todoItems")) || [];
