@@ -70,6 +70,8 @@
 #container1.style1 {
   background-color: black;
   padding-bottom: 50px;
+  margin: auto;
+  max-width: 90%;
 }
 
 h1 {
@@ -114,6 +116,7 @@ ul li {
   background: #eee;
   font-size: 18px;
   transition: 0.2s;
+  list-style: none;
 
   /* make the list items unselectable */
   -webkit-user-select: none;
@@ -203,6 +206,8 @@ input {
   background-image: url(../assets/stars.png);
   background-size: 200px;
   background-repeat: no-repeat;
+  margin: auto;
+  max-width: 90%;
 }
 
 ul.style2 li {
@@ -214,6 +219,7 @@ ul.style2 li {
   padding: 12px 30px 12px 30px;
   font-size: 18px;
   transition: 0.2s;
+  list-style: none;
 
   /* make the list items unselectable */
   -webkit-user-select: none;
@@ -283,6 +289,8 @@ ul.style2 li:hover {
 
 #container1.style3 {
   background-color: white;
+  margin: auto;
+  max-width: 90%;
 }
 
 ul.style3 li {
@@ -296,6 +304,7 @@ ul.style3 li {
   padding: 12px 30px 12px 30px;
   font-size: 18px;
   transition: 0.2s;
+  list-style: none;
 
   /* make the list items unselectable */
   -webkit-user-select: none;
