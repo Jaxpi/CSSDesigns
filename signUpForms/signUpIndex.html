@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign-Up Form Designs</title>
     <link rel="stylesheet" type="text/css" href="formsStyle.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   </head>
 
@@ -65,10 +66,10 @@
     </div>
 
     <div class="formContainer" id="form3">
-      <div class="container">
+      <div class="container" id="background3">
         <form action="/action_page.php">
           <div class="row">
-            <h2 style="text-align: center">Login</h2>
+            <h2 style="text-align: center" id="h2-3">Login</h2>
             <div class="vl">
               <span class="vl-innertext">or</span>
             </div>
@@ -152,9 +153,33 @@
                 </form>
               </div>
             </div>
+
+            <div class="formContainer" id="form4">
+              <div class="form-popup4" id="myForm4" style="display: none;">
+                <form action="#" class="form-container4">
+                  <label for="email"><b>Email</b></label>
+                  <input
+                    type="text"
+                    placeholder="Enter Email"
+                    name="email"
+                    required
+                  />
+                  <button type="submit" class="btn4">Submit</button>
+                  <button
+                    type="button"
+                    class="btn4 cancel4"
+                    onclick="closeForm4()"
+                  >
+                    Cancel
+                  </button>
+                </form>
+              </div>
+            </div>
+
+
           </div>
           <div class="col">
-            <a href="#" style="color: white" class="btn">Forgot password?</a>
+            <a href="#" style="color: white" class="btn" onclick="openForm4()">Forgot password?</a>
           </div>
         </div>
       </div>

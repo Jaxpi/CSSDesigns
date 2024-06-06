@@ -3,6 +3,11 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: KGAllofMe;
+  src: url(/assets/KGAllofMe.ttf);
+}
+
 #homeButton {
   margin: 20px;
 }
@@ -155,7 +160,12 @@
 }
 
 #form3 {
-  max-width: 900px;
+  max-width: 1200px;
+}
+
+#h2-3 {
+  font-family: KGAllofMe;
+  font-size: 2em;
 }
 
 /* style the container */
@@ -261,7 +271,7 @@ input[type=submit]:hover {
   border-radius: 0px 0px 4px 4px;
 }
 
-#myForm3 {
+#myForm3, #myForm4 {
   position: absolute;
   left: 28px;
   background-color: rgb(175, 175, 175);
@@ -271,12 +281,16 @@ input[type=submit]:hover {
   margin-top: 10px;
 }
 
-.btn3 {
+#myForm4 {
+  left: 658px;
+}
+
+.btn3, .btn4 {
   margin: 10px 10px 0px;
   width: 100px;
 }
 
-.btn3:hover {
+.btn3:hover, .btn4:hover {
   cursor: pointer;
 }
 
@@ -297,5 +311,9 @@ input[type=submit]:hover {
   }
   #myForm3 {
     margin-top: 60px;
+  }
+  #myForm4 {
+    margin-top: 60px;
+    left: 28px;
   }
 }

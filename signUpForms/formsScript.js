@@ -27,9 +27,23 @@ function openForm3() {
     document.getElementById("myForm3").style.display = "none";
   } else {
     document.getElementById("myForm3").style.display = "block";
+    document.getElementById("myForm4").style.display = "none";
   }
 }
 
 function closeForm3() {
   document.getElementById("myForm3").style.display = "none";
+}
+
+function openForm4() {
+  if (document.getElementById("myForm4").style.display == "block") {
+    document.getElementById("myForm4").style.display = "none";
+  } else {
+    document.getElementById("myForm4").style.display = "block";
+    document.getElementById("myForm3").style.display = "none";
+  }
+}
+
+function closeForm4() {
+  document.getElementById("myForm4").style.display = "none";
 }
