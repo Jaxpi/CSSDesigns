@@ -308,6 +308,10 @@ ul.style3 li:nth-child(odd) {
   background: linear-gradient(to right, rgb(0, 195, 255), rgb(146, 239, 255));
 }
 
+ul.style3 li:nth-child(odd):hover {
+  background: linear-gradient(to left, darkmagenta, rgb(202, 0, 202));
+}
+
 ul.style3 li.checked {
   background: #888;
   color: #fff;
@@ -316,7 +320,12 @@ ul.style3 li.checked {
 
 ul.style3 li:hover {
   scale: 101%;
-  background-color: darkmagenta;
+  background: linear-gradient(to left, darkmagenta, rgb(202, 0, 202));
+}
+
+ul.style3 li.checked:hover {
+  scale: 101%;
+  background: #757575;
 }
 
 #delete-button.style3 {
