@@ -40,6 +40,8 @@
   position: relative;
   font-size: 36px;
   background: transparent;
+  /* background-image: url(../assets/yellowbackground.gif);
+  background-size: cover; */
 }
 
 #style-toggle:hover {
