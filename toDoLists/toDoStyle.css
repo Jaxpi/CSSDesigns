@@ -65,6 +65,8 @@
 .container1 {
   background-color: black;
   padding-bottom: 50px;
+  margin: auto;
+  max-width: 90%;
 }
 
 #container1.style1 {
