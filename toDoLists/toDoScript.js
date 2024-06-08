@@ -96,6 +96,7 @@ function addTodoItem(e) {
 
 // Function to delete an item
 function deleteTodoItem(e) {
+  e.stopPropagation();
   const index = e.target.closest("li").dataset.index;
   savedItems.splice(index, 1);
   localStorage.setItem("todoItems", JSON.stringify(savedItems));
