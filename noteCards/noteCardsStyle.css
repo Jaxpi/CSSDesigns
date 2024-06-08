@@ -61,13 +61,14 @@
 .container h1 {
   display: flex;
   align-items: center;
-  font-size: 35px;
+  font-size: 36px;
   font-weight: 600;
   text-shadow: 3px 3px rgb(88, 88, 88);
 }
 
 .container h1 img {
   width: 60px;
+  margin-right: 10px;
 }
 
 .container button img {

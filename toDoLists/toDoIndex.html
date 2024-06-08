@@ -8,14 +8,19 @@
   </head>
   <body>
     <button id="homeButton"><a href="../index.html">Home</a></button>
-    <br>
-<div class="centerContainer">
-  <video id="background-video" autoplay loop muted poster="../assets/backVid.mp4">
-    <source src="/assets/backVid.mp4" type="video/mp4">
-  </video>
-  <button id="style-toggle">Toggle Style By Clicking Here</button>
-</div>
-
+    <br />
+    <div class="centerContainer">
+      <video
+        id="background-video"
+        autoplay
+        loop
+        muted
+        poster="../assets/backVid.mp4"
+      >
+        <source src="/assets/backVid.mp4" type="video/mp4" />
+      </video>
+      <button id="style-toggle">Toggle Style By Clicking Here</button>
+    </div>
 
     <div class="container1" id="container1">
       <div class="card">
@@ -26,6 +31,7 @@
 
         <form id="todo-form" method="POST">
           <input
+            autocomplete="off"
             type="text"
             placeholder="enter new item..."
             name="todo-text"

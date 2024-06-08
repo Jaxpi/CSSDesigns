@@ -13,7 +13,7 @@ const styleJumbotron = document.getElementById("jumbotron");
 const styleDate = document.getElementById("currentDay");
 
 // Initialize with the default style and set new style upon click event
-let currentStyle = 1;
+let currentStyle = parseInt(localStorage.getItem("currentStyle")) || 1;
 
 const elementsToUpdate = [
   styleContainer,
@@ -30,6 +30,8 @@ function applyStyle(style) {
   });
 }
 
+applyStyle(currentStyle);
+
 styleToggle.addEventListener("click", () => {
   currentStyle = (currentStyle % 3) + 1;
   applyStyle(currentStyle);
@@ -41,6 +43,7 @@ styleToggle.addEventListener("click", () => {
   });
   
   console.log("current style: ", `style${currentStyle}`)
+  localStorage.setItem("currentStyle", currentStyle);
 });
 
 // Load existing items from local storage (if any)
