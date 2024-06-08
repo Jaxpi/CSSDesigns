@@ -5,6 +5,8 @@
   box-sizing: border-box;
 }
 
+/* ******** TOP NAV *********/
+
 #homeButton {
   margin: 20px;
 }
@@ -40,14 +42,16 @@
   position: relative;
   font-size: 24px;
   background: transparent;
-  /* background-image: url(../assets/yellowbackground.gif);
-    background-size: cover; */
+  background-image: url(../assets/yellowbackground.gif);
+  background-size: cover;
 }
 
 #style-toggle:hover {
   cursor: pointer;
   text-shadow: 1px 1px rgb(196, 196, 196);
 }
+
+/* ******** INITIAL STYLES *********/
 
 .container {
   width: 100%;
@@ -140,35 +144,9 @@
   padding-left: 10%;
 }
 
-#container.style2 {
-  width: 100%;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #00c44b, #73ff00);
-  color: #fff;
-  padding-top: 4%;
-  padding-left: 10%;
-}
-
-#container.style3 {
-  width: 100%;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #c4a000, #ff0022);
-  color: #fff;
-  padding-top: 4%;
-  padding-left: 10%;
-}
+/* ******** STYLE 1 *********/
 
 #container-h1-img.style1 {
-  width: 60px;
-  margin-right: 10px;
-}
-
-#container-h1-img.style2 {
-  width: 60px;
-  margin-right: 10px;
-}
-
-#container-h1-img.style3 {
   width: 60px;
   margin-right: 10px;
 }
@@ -188,6 +166,50 @@
   box-shadow: 3px 3px rgb(88, 88, 88);
 }
 
+#container-button-img.style1 {
+  width: 25px;
+  margin-right: 8px;
+}
+
+#container-h1.style1 {
+  display: flex;
+  align-items: center;
+  font-size: 36px;
+  font-weight: 600;
+  text-shadow: 3px 3px rgb(88, 88, 88);
+  color: white;
+}
+
+.input-box.style1 {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  min-height: 150px;
+  background: white;
+  color: black;
+  padding: 20px;
+  margin: 20px 0;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: 3px 3px rgb(88, 88, 88);
+}
+
+/* ******** STYLE 2 *********/
+
+#container.style2 {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(#00ff62, #00860b);
+  color: #fff;
+  padding-top: 4%;
+  padding-left: 10%;
+}
+
+#container-h1-img.style2 {
+  width: 60px;
+  margin-right: 10px;
+}
+
 #container-button.style2 {
   display: flex;
   align-items: center;
@@ -201,6 +223,58 @@
   margin: 30px 0 20px;
   cursor: pointer;
   box-shadow: 3px 3px rgb(88, 88, 88);
+}
+
+#container-button-img.style2 {
+  width: 25px;
+  margin-right: 8px;
+}
+
+#container-h1.style2 {
+  display: flex;
+  align-items: center;
+  font-size: 36px;
+  font-weight: 600;
+  text-shadow: 2px 2px white;
+  color: black;
+}
+
+.input-box.style2 {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  min-height: 150px;
+  background: yellow;
+  color: black;
+  padding: 20px;
+  margin: 20px 0;
+  outline: none;
+  border-radius: 50px;
+  box-shadow: 3px 3px white;
+}
+
+.input-box-img.style2 {
+  width: 200px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+/* ******** STYLE 3 *********/
+
+#container.style3 {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #c4a000, #ff0022);
+  color: #fff;
+  padding-top: 4%;
+  padding-left: 10%;
+}
+
+#container-h1-img.style3 {
+  width: 60px;
+  margin-right: 10px;
 }
 
 #container-button.style3 {
@@ -218,37 +292,9 @@
   box-shadow: 3px 3px rgb(88, 88, 88);
 }
 
-#container-button-img.style1 {
-  width: 25px;
-  margin-right: 8px;
-}
-
-#container-button-img.style2 {
-  width: 25px;
-  margin-right: 8px;
-}
-
 #container-button-img.style3 {
   width: 25px;
   margin-right: 8px;
-}
-
-#container-h1.style1 {
-  display: flex;
-  align-items: center;
-  font-size: 36px;
-  font-weight: 600;
-  text-shadow: 3px 3px rgb(88, 88, 88);
-  color: white;
-}
-
-#container-h1.style2 {
-  display: flex;
-  align-items: center;
-  font-size: 36px;
-  font-weight: 600;
-  text-shadow: 2px 2px white;
-  color: black;
 }
 
 #container-h1.style3 {
@@ -258,35 +304,6 @@
   font-weight: 600;
   text-shadow: 1px 1px black;
   color: rgb(0, 162, 255);
-}
-
-.input-box.style1 {
-  position: relative;
-  width: 100%;
-  max-width: 500px;
-  min-height: 150px;
-  background: white;
-  color: black;
-  padding: 20px;
-  margin: 20px 0;
-  outline: none;
-  border-radius: 5px;
-  box-shadow: 3px 3px rgb(88, 88, 88);
-  border: 10px solid red;
-}
-
-.input-box.style2 {
-  position: relative;
-  width: 100%;
-  max-width: 500px;
-  min-height: 150px;
-  background: yellow;
-  color: black;
-  padding: 20px;
-  margin: 20px 0;
-  outline: none;
-  border-radius: 5%;
-  box-shadow: 3px 3px white;
 }
 
 .input-box.style3 {
@@ -301,12 +318,4 @@
   outline: none;
   border-radius: 5px;
   box-shadow: 3px 3px rgb(88, 88, 88);
-}
-
-.input-box-img.style2 {
-  width: 200px;
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-  cursor: pointer;
 }
