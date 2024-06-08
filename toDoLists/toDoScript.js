@@ -40,10 +40,12 @@ styleToggle.addEventListener("click", () => {
     button.className = "close";
     button.classList.remove("style1", "style2", "style3");
     button.classList.add(`style${currentStyle}`);
+    localStorage.setItem(`buttonStyle${button.id}`, currentStyle)
   });
   
   console.log("current style: ", `style${currentStyle}`)
   localStorage.setItem("currentStyle", currentStyle);
+
 });
 
 // Load existing items from local storage (if any)
@@ -63,6 +65,10 @@ function renderTodoItems() {
     deleteButton.textContent = "x";
     deleteButton.className = "close";
     deleteButton.id = "delete-button";
+    const storedStyle = localStorage.getItem(`buttonStyle${deleteButton.id}`);
+  if (storedStyle) {
+    deleteButton.classList.add(`style${storedStyle}`);
+  }
     deleteButton.addEventListener("click", deleteTodoItem);
     li.appendChild(deleteButton);
     // Mark as checked if needed
