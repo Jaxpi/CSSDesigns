@@ -42,10 +42,8 @@ styleToggle.addEventListener("click", () => {
     button.classList.add(`style${currentStyle}`);
     localStorage.setItem(`buttonStyle${button.id}`, currentStyle)
   });
-  
-  console.log("current style: ", `style${currentStyle}`)
   localStorage.setItem("currentStyle", currentStyle);
-
+  console.log("current style: ", `style${currentStyle}`)
 });
 
 // Load existing items from local storage (if any)
