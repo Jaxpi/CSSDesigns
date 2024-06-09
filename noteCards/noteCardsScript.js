@@ -26,11 +26,9 @@ const elementsToUpdate = [
 
 function applyStyle(style) {
   elementsToUpdate.forEach((element) => {
-    console.log("element is ", element.length);
     if (element.length > 0) {
       // If it is, iterate over each node
       for (i = 0; i < element.length;i++){
-        console.log("el[" + i + "]", element[i]);
         element[i].classList.remove("style1", "style2", "style3");
         element[i].classList.add(`style${style}`);
       };
@@ -65,7 +63,6 @@ createBtn.addEventListener("click", () => {
   img.src = "../assets/deleteIcon.png";
   img.className = "input-box-img";
   notesContainer.appendChild(inputBox).appendChild(img);
-  console.log("notes container after adding", notesContainer);
 });
 
 notesContainer.addEventListener("click", function (e) {

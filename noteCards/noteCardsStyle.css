@@ -5,6 +5,26 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: bitwise;
+  src: url(../assets/bitwiseFont.ttf);
+}
+
+@font-face {
+  font-family: usa;
+  src: url(../assets/usaFont.TTF);
+}
+
+@font-face {
+  font-family: topSecret;
+  src: url(../assets/topSecretFont.ttf);
+}
+
+@font-face {
+  font-family: news;
+  src: url(../assets/newsFont.ttf);
+}
+
 /* ******** TOP NAV *********/
 
 #homeButton {
@@ -117,24 +137,6 @@
   cursor: pointer;
 }
 
-.container.style2 {
-  width: 100%;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #00c44b, #73ff00);
-  color: #fff;
-  padding-top: 4%;
-  padding-left: 10%;
-}
-
-.container h1.style2 {
-  display: flex;
-  align-items: center;
-  font-size: 36px;
-  font-weight: 600;
-  text-shadow: 3px 3px rgb(88, 88, 88);
-  color: red;
-}
-
 #container {
   width: 100%;
   min-height: 100vh;
@@ -147,6 +149,7 @@
 /* ******** STYLE 1 *********/
 
 #container-h1-img.style1 {
+  content: url(../assets/noteImg.png);
   width: 60px;
   margin-right: 10px;
 }
@@ -199,18 +202,20 @@
 #container.style2 {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(#00ff62, #00860b);
+  /* background: linear-gradient(#00ff62, #00860b); */
+  background-image: url(../assets/sciScreen.jpg);
   color: #fff;
   padding-top: 4%;
   padding-left: 10%;
 }
 
 #container-h1-img.style2 {
-  width: 60px;
+  content: url(../assets/sciNote.png);
+  width: 80px;
   margin-right: 10px;
 }
 
-#container-button.style2 {
+/* #container-button.style2 {
   display: flex;
   align-items: center;
   background: linear-gradient(135deg, #d0ff00, #ff8513);
@@ -223,9 +228,10 @@
   margin: 30px 0 20px;
   cursor: pointer;
   box-shadow: 3px 3px rgb(88, 88, 88);
-}
+} */
 
 #container-button-img.style2 {
+  filter: invert(100);
   width: 25px;
   margin-right: 8px;
 }
@@ -233,13 +239,14 @@
 #container-h1.style2 {
   display: flex;
   align-items: center;
-  font-size: 36px;
+  font-family: bitwise;
+  font-size: 40px;
   font-weight: 600;
-  text-shadow: 2px 2px white;
-  color: black;
+  text-shadow: 2px 2px black;
+  color: white;
 }
 
-.input-box.style2 {
+/* .input-box.style2 {
   position: relative;
   width: 100%;
   max-width: 500px;
@@ -251,6 +258,46 @@
   outline: none;
   border-radius: 50px;
   box-shadow: 3px 3px white;
+} */
+
+.input-box.style2:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: 1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.input-box.style2:after {
+  z-index: 1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
 }
 
 .input-box-img.style2 {
@@ -261,19 +308,88 @@
   cursor: pointer;
 }
 
+#container-button.style2 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#container-button.style2:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+#container-button.style2:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
 /* ******** STYLE 3 *********/
 
 #container.style3 {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(135deg, #c4a000, #ff0022);
+  background-image: url(../assets/mathBackground3.png);
+  background-blend-mode: difference;
   color: #fff;
   padding-top: 4%;
   padding-left: 10%;
 }
 
 #container-h1-img.style3 {
-  width: 60px;
+  content: url(../assets/tabletMan.png);
+  width: 80px;
   margin-right: 10px;
 }
 
