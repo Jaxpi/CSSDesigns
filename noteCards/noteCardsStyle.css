@@ -147,6 +147,13 @@
   padding-left: 10%;
 }
 
+.notes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
 /* ******** STYLE 1 *********/
 
 #container-h1-img.style1 {
@@ -203,7 +210,9 @@
 #container.style2 {
   width: 100%;
   min-height: 100vh;
-  background-image: url(../assets/sciScreen.jpg);
+  background-image: url(../assets/hexBack.gif);
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
   color: #fff;
   padding-top: 4%;
   padding-left: 10%;
