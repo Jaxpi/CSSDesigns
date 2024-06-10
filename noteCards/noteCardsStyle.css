@@ -16,11 +16,6 @@
 }
 
 @font-face {
-  font-family: topSecret;
-  src: url(../assets/topSecretFont.ttf);
-}
-
-@font-face {
   font-family: eraser;
   src: url(../assets/eraserDustFont.ttf);
 }

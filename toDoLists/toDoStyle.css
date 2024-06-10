@@ -11,6 +11,11 @@
   src: url(../assets/usaFont.TTF);
 }
 
+@font-face {
+  font-family: kgallofme;
+  src: url(../assets/KGAllofMe.ttf);
+}
+
 #homeButton {
   margin: 20px;
 }
@@ -215,6 +220,7 @@ input {
   background-repeat: no-repeat;
   margin: auto;
   max-width: 90%;
+  padding-bottom: 50px;
 }
 
 ul.style2 li {
@@ -284,6 +290,12 @@ ul.style2 li:hover {
   border: none;
   padding: 10px;
   text-shadow: 4px 4px 4px black;
+}
+
+#jumbotron.style2 h1 {
+  font-family: usa;
+  font-weight: lighter;
+  font-size: 40px;
 }
 
 #currentDay.style2 {
@@ -381,4 +393,9 @@ ul.style3 li.checked:hover {
   border: none;
   padding: 10px;
   text-shadow: 0px 0px 8px black;
+}
+
+#jumbotron.style3 h1 {
+  font-family: kgallofme;
+  font-weight: lighter;
 }
