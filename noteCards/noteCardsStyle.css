@@ -130,6 +130,7 @@
 }
 
 .input-box img {
+    z-index: 2;
   width: 20px;
   position: absolute;
   bottom: 15px;
@@ -202,7 +203,6 @@
 #container.style2 {
   width: 100%;
   min-height: 100vh;
-  /* background: linear-gradient(#00ff62, #00860b); */
   background-image: url(../assets/sciScreen.jpg);
   color: #fff;
   padding-top: 4%;
@@ -215,21 +215,6 @@
   margin-right: 10px;
 }
 
-/* #container-button.style2 {
-  display: flex;
-  align-items: center;
-  background: linear-gradient(135deg, #d0ff00, #ff8513);
-  color: white;
-  font-size: 16px;
-  outline: 0;
-  border: 0;
-  border-radius: 40px;
-  padding: 15px 25px;
-  margin: 30px 0 20px;
-  cursor: pointer;
-  box-shadow: 3px 3px rgb(88, 88, 88);
-} */
-
 #container-button-img.style2 {
   filter: invert(100);
   width: 25px;
@@ -241,74 +226,12 @@
   align-items: center;
   font-family: bitwise;
   font-size: 40px;
-  font-weight: 600;
+  font-weight: lighter;
   text-shadow: 2px 2px black;
   color: white;
 }
 
-/* .input-box.style2 {
-  position: relative;
-  width: 100%;
-  max-width: 500px;
-  min-height: 150px;
-  background: yellow;
-  color: black;
-  padding: 20px;
-  margin: 20px 0;
-  outline: none;
-  border-radius: 50px;
-  box-shadow: 3px 3px white;
-} */
-
-.input-box.style2:before {
-  content: "";
-  background: linear-gradient(
-    45deg,
-    #ff0000,
-    #ff7300,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
-    #002bff,
-    #7a00ff,
-    #ff00c8,
-    #ff0000
-  );
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background-size: 400%;
-  z-index: 1;
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  animation: glowing-button-85 20s linear infinite;
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 10px;
-}
-
-.input-box.style2:after {
-  z-index: 1;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #222;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
-}
-
-.input-box-img.style2 {
-  width: 200px;
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-  cursor: pointer;
-}
-
-#container-button.style2 {
+#container-button.style2, .input-box.style2 {
   padding: 0.6em 2em;
   border: none;
   outline: none;
@@ -321,9 +244,13 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  font-family: bitwise;
+  font-weight: lighter;
+  font-size: 18px;
+  opacity: .9;
 }
 
-#container-button.style2:before {
+#container-button.style2:before, .input-box.style2:before {
   content: "";
   background: linear-gradient(
     45deg,
@@ -363,7 +290,7 @@
   }
 }
 
-#container-button.style2:after {
+#container-button.style2:after, .input-box.style2:after {
   z-index: -1;
   content: "";
   position: absolute;
@@ -373,6 +300,10 @@
   left: 0;
   top: 0;
   border-radius: 10px;
+}
+
+.input-box.style2 > * {
+  filter: invert(100);
 }
 
 /* ******** STYLE 3 *********/
@@ -398,7 +329,8 @@
   display: flex;
   align-items: center;
   font-family: eraser;
-  background: linear-gradient(135deg, #70eafa, #9aadff);
+  background: linear-gradient(135deg, #ffdb3b, #f17b0c);
+  /* background: linear-gradient(135deg, #70eafa, #9aadff); */
   color: white;
   font-size: 16px;
   outline: 0;
@@ -430,7 +362,7 @@
   width: 100%;
   max-width: 500px;
   min-height: 150px;
-  background: lightblue;
+  background: linear-gradient(90deg, #899fff, #4fb9ff, #4fb9ff, #899fff);
   color: black;
   padding: 20px;
   margin: 20px 0;
