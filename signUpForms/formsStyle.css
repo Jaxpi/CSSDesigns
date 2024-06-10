@@ -25,6 +25,13 @@
   box-shadow: 2px 2px black;
 }
 
+#border {
+  margin: auto;
+  
+  width: 100%;
+  border: 2px dashed black;
+}
+
 .formContainer {
   margin: 20px;
 }
