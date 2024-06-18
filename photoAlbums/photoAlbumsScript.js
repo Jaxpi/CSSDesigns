@@ -7,15 +7,18 @@ function enlargeImage(event) {
   const clickedImage = event.target;
   if (enlargedImage === clickedImage) {
     // Clicked again, send it back to its original position
-    clickedImage.classList.remove("enlarged-image");
+      clickedImage.classList.remove("enlarged-image");
+      clickedImage.style.clipPath = "";
     enlargedImage = null;
   } else {
     // Hide the previously enlarged image (if any)
-      if (enlargedImage) {
-          enlargedImage.classList.remove("enlarged-image");
+    if (enlargedImage) {
+        enlargedImage.classList.remove("enlarged-image");
+        enlargedImage.style.clipPath = "";
     }
     // Enlarge the clicked image
     clickedImage.classList.add("enlarged-image");
+    clickedImage.style.clipPath = "none";
     enlargedImage = clickedImage;
     currentIndex = Array.from(imageElements).indexOf(enlargedImage);
   }
