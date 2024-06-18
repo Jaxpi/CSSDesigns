@@ -7,14 +7,14 @@ function enlargeImage(event) {
   const clickedImage = event.target;
   if (enlargedImage === clickedImage) {
     // Clicked again, send it back to its original position
-      clickedImage.classList.remove("enlarged-image");
-      clickedImage.style.clipPath = "";
+    clickedImage.classList.remove("enlarged-image");
+    clickedImage.style.clipPath = "";
     enlargedImage = null;
   } else {
     // Hide the previously enlarged image (if any)
     if (enlargedImage) {
-        enlargedImage.classList.remove("enlarged-image");
-        enlargedImage.style.clipPath = "";
+      enlargedImage.classList.remove("enlarged-image");
+      enlargedImage.style.clipPath = "";
     }
     // Enlarge the clicked image
     clickedImage.classList.add("enlarged-image");
@@ -52,4 +52,25 @@ document.addEventListener("keydown", (event) => {
       showPreviousImage();
     }
   }
+});
+
+const styleToggle = document.getElementById("style-toggle");
+const galleries = [
+  document.querySelector(".gallery1"),
+  document.querySelector(".gallery2"),
+  document.querySelector(".gallery3"),
+];
+let currentGalleryIndex = 0;
+
+for (let i = 1; i < galleries.length; i++) {
+  galleries[i].style.display = "none";
+}
+
+styleToggle.addEventListener("click", () => {
+  // Toggle display for the current gallery
+  galleries[currentGalleryIndex].style.display = "none"; // Hide current gallery
+
+  // Switch to the next gallery
+  currentGalleryIndex = (currentGalleryIndex + 1) % galleries.length;
+  galleries[currentGalleryIndex].style.display = "grid"; // Show next gallery
 });
