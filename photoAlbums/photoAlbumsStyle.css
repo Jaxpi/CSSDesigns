@@ -1,7 +1,7 @@
 body {
   margin: 0;
-padding: 0;
-box-sizing: border-box;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* ******** TOP NAV *********/
@@ -53,10 +53,11 @@ box-sizing: border-box;
 /* ******** GALLERY 1 *********/
 
 .gallery1 {
-    margin: 0;
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
+  margin-top: 100px;
+  min-height: 100vh;
+  display: grid;
+  align-items: start;
+  justify-items: center;
 }
 
 .gallery {
@@ -118,11 +119,11 @@ box-sizing: border-box;
 /* ******** GALLERY 2 *********/
 
 .gallery2 {
-    display: hidden;
+  display: hidden;
 }
 
 /* ******** GALLERY 3 *********/
 
 .gallery3 {
-    display: hidden;
+  display: hidden;
 }
