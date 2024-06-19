@@ -122,6 +122,54 @@ body {
   display: hidden;
 }
 
+.gallery2imgs {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background-color: #010101;
+  position: relative;
+  width: 300px;
+  height: 200px;
+  left: 35%;
+  top: 75%;
+  transform-style: preserve-3d;
+  animation: rotate 35s linear infinite;
+}
+
+.gallery2imgs:hover {
+  animation-play-state: paused;
+}
+
+@keyframes rotate {
+  from {
+    transform: perspective(1200px) rotateY(0deg);
+  }
+
+  to {
+    transform: perspective(1200px) rotateY(360deg);
+  }
+}
+
+.gallery2imgs span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(380px);
+}
+
+.gallery2imgs span img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery2imgs span img:hover {
+  scale: 150%;
+}
+
 /* ******** GALLERY 3 *********/
 
 .gallery3 {
