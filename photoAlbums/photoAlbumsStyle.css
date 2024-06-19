@@ -120,6 +120,8 @@ body {
 
 .gallery2 {
   display: hidden;
+  background-color: black;
+  height: 66.66vh;
 }
 
 .gallery2imgs {
@@ -130,8 +132,8 @@ body {
   position: relative;
   width: 300px;
   height: 200px;
-  left: 35%;
-  top: 75%;
+  left: 33.33%;
+  top: 33.33%;
   transform-style: preserve-3d;
   animation: rotate 35s linear infinite;
 }
