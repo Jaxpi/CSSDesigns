@@ -6,16 +6,7 @@ https://jaxpi.github.io/DEPLOYEDLINK/
 
 ## Description
 
-This is a collection of CSS styled HTML elements for practice and reference.
-
-
-## Credits
-
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
+This is a collection of CSS styled HTML elements with some JavaScript functions for practice and reference.
 
 ## License
 
