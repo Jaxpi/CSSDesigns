@@ -1,0 +1,126 @@
+body {
+  background-color: rgb(44, 44, 44);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#homeButton {
+  margin: 20px;
+}
+
+#homeButton a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+}
+
+#homeButton:hover {
+  cursor: pointer;
+  scale: 102%;
+  text-shadow: none;
+  box-shadow: 2px 2px black;
+}
+
+.scrollContainer {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 50px;
+  margin: 20px;
+}
+
+.scroll1 {
+  width: 600px;
+  height: 100px;
+  background-color: white;
+  overflow: scroll;
+}
+
+.scroll2 {
+  width: 600px;
+  height: 100px;
+  background-color: gray;
+  overflow: scroll;
+  scrollbar-color: gray black;
+}
+
+.scroll3 {
+  width: 600px;
+  height: 100px;
+  background-color: white;
+  overflow: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: red white;
+}
+
+.scroll4 {
+  width: 600px;
+  height: 100px;
+  background-color: red;
+  overflow: scroll;
+  /* ::-webkit-scrollbar-button the buttons on the scrollbar (arrows pointing upwards and downwards).
+::-webkit-scrollbar-thumb the draggable scrolling handle.
+::-webkit-scrollbar-track the track (progress bar) of the scrollbar.
+::-webkit-scrollbar-track-piece the track (progress bar) NOT covered by the handle.
+::-webkit-scrollbar-corner the bottom corner of the scrollbar, where both horizontal and vertical scrollbars meet.
+::-webkit-resizer the draggable resizing handle that appears at the bottom corner of some elements. */
+}
+
+.scroll4::-webkit-scrollbar {
+  background-color: black;
+}
+
+.scroll4::-webkit-scrollbar-corner {
+  background-color: black;
+}
+
+.scroll4::-webkit-scrollbar-thumb {
+  background-image: url(../assets/icons/redPowderIcon.png);
+  background-size: 18px;
+  background-repeat: no-repeat;
+  box-shadow: 2px 2px white;
+}
+
+.scroll5 {
+  width: 600px;
+  height: 100px;
+  background-color: transparent;
+  color: white;
+  overflow: scroll;
+}
+
+.scroll5::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+.scroll5::-webkit-scrollbar-thumb {
+  background-image: radial-gradient(circle, #0044ff, #0033c0, #001d6b);
+  background-repeat: no-repeat;
+  box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+  border-radius: 100px;
+}
+
+.scroll5::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+.scroll6 {
+  width: 600px;
+  height: 100px;
+  background-color: white;
+  overflow: scroll;
+}
+
+.scroll7 {
+  width: 600px;
+  height: 100px;
+  background-color: white;
+  overflow: scroll;
+}
+
+.scroll8 {
+  width: 600px;
+  height: 100px;
+  background-color: white;
+  overflow: scroll;
+}
