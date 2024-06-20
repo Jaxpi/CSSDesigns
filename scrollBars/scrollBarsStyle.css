@@ -93,11 +93,6 @@ body {
   background-color: transparent;
 }
 
-.scroll4::-webkit-scrollbar-track {
-  margin-left: 150px;
-  margin-right: 150px;
-}
-
 .scroll5::-webkit-scrollbar-thumb {
   background-image: radial-gradient(circle, #0044ff, #0033c0, #001d6b);
   background-repeat: no-repeat;
