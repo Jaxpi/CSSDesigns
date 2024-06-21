@@ -7,17 +7,17 @@
 
 @font-face {
   font-family: bitwise;
-  src: url(../assets/bitwiseFont.ttf);
+  src: url(../assets/fonts/bitwiseFont.ttf);
 }
 
 @font-face {
   font-family: usa;
-  src: url(../assets/usaFont.TTF);
+  src: url(../assets/fonts/usaFont.TTF);
 }
 
 @font-face {
   font-family: eraser;
-  src: url(../assets/eraserDustFont.ttf);
+  src: url(../assets/fonts/eraserDustFont.ttf);
 }
 
 /* ******** TOP NAV *********/
@@ -57,7 +57,7 @@
   position: relative;
   font-size: 24px;
   background: transparent;
-  background-image: url(../assets/yellowbackground.gif);
+  background-image: url(../assets/backgrounds/yellowbackground.gif);
   background-size: cover;
 }
 
@@ -152,7 +152,7 @@
 /* ******** STYLE 1 *********/
 
 #container-h1-img.style1 {
-  content: url(../assets/noteImg.png);
+  content: url(../assets/icons/noteImg.png);
   width: 60px;
   margin-right: 10px;
 }
@@ -205,7 +205,7 @@
 #container.style2 {
   width: 100%;
   min-height: 100vh;
-  background-image: url(../assets/hexBack.gif);
+  background-image: url(../assets/backgrounds/hexBack.gif);
   background-size: 100vw 100vh;
   background-attachment: fixed;
   color: #fff;
@@ -214,7 +214,7 @@
 }
 
 #container-h1-img.style2 {
-  content: url(../assets/sciNote.png);
+  content: url(../assets/icons/sciNote.png);
   width: 80px;
   margin-right: 10px;
 }
@@ -315,7 +315,7 @@
 #container.style3 {
   width: 100%;
   min-height: 100vh;
-  background-image: url(../assets/mathBackground3.png);
+  background-image: url(../assets/backgrounds/mathbackground3.png);
   background-blend-mode: difference;
   color: #fff;
   padding-top: 4%;
@@ -323,7 +323,7 @@
 }
 
 #container-h1-img.style3 {
-  content: url(../assets/tabletMan.png);
+  content: url(../assets/icons/tabletMan.png);
   width: 80px;
   margin-right: 10px;
   filter: invert(100);

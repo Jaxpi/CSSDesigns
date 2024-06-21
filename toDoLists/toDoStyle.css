@@ -8,12 +8,12 @@
 
 @font-face {
   font-family: usa;
-  src: url(../assets/usaFont.TTF);
+  src: url(../assets/fonts/usaFont.TTF);
 }
 
 @font-face {
   font-family: kgallofme;
-  src: url(../assets/KGAllofMe.ttf);
+  src: url(../assets/fonts/KGAllofMe.ttf);
 }
 
 #homeButton {
@@ -215,7 +215,7 @@ input {
 
 #container1.style2 {
   background-color: navy; /* Change the background color */
-  background-image: url(../assets/stars.png);
+  background-image: url(../assets/backgrounds/stars.png);
   background-size: 200px;
   background-repeat: no-repeat;
   margin: auto;
