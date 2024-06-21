@@ -58,27 +58,28 @@ body {
   height: 100px;
   background-color: red;
   overflow: scroll;
-  /* ::-webkit-scrollbar-button the buttons on the scrollbar (arrows pointing upwards and downwards).
-::-webkit-scrollbar-thumb the draggable scrolling handle.
-::-webkit-scrollbar-track the track (progress bar) of the scrollbar.
-::-webkit-scrollbar-track-piece the track (progress bar) NOT covered by the handle.
-::-webkit-scrollbar-corner the bottom corner of the scrollbar, where both horizontal and vertical scrollbars meet.
-::-webkit-resizer the draggable resizing handle that appears at the bottom corner of some elements. */
 }
 
 .scroll4::-webkit-scrollbar {
-  background-color: black;
+  background-color: white;
 }
 
-.scroll4::-webkit-scrollbar-corner {
-  background-color: black;
+.scroll4::-webkit-scrollbar-button {
+  background-image: url(../assets/icons/redPowderIcon.png);
+  background-size: 18px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .scroll4::-webkit-scrollbar-thumb {
-  background-image: url(../assets/icons/redPowderIcon.png);
-  background-size: 18px;
-  background-repeat: no-repeat;
-  box-shadow: 0px 0px 0px 2px white;
+  background-image: radial-gradient(
+    circle,
+    red,
+    rgb(209, 0, 0),
+    rgb(168, 0, 0)
+  );
+  border-radius: 10px;
+  box-shadow: 0 0 2px 2px black;
 }
 
 .scroll5 {
@@ -96,7 +97,7 @@ body {
 .scroll5::-webkit-scrollbar-thumb {
   background-image: radial-gradient(circle, #0044ff, #0033c0, #001d6b);
   background-repeat: no-repeat;
-  box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+  box-shadow: inset 0px 0px 2px 2px black;
   border-radius: 100px;
 }
 
@@ -108,7 +109,38 @@ body {
   width: 600px;
   height: 100px;
   background-color: white;
+  background-image: linear-gradient(45deg, #00ffff, #64faff, #b3fff5);
   overflow: scroll;
+}
+
+.scroll6::-webkit-scrollbar {
+  width: 20px;
+}
+
+.scroll6::-webkit-scrollbar-button {
+  background-color: red;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.scroll6::-webkit-scrollbar-thumb {
+  background-color: yellow;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.scroll6::-webkit-scrollbar-track {
+  background-color: orange;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 2px 1px black;
+}
+
+.scroll6::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+.scroll6::-webkit-resizer {
+  background-color: purple;
 }
 
 .scroll7 {
