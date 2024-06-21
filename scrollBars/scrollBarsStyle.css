@@ -39,7 +39,8 @@ body {
 .scroll2 {
   width: 600px;
   height: 100px;
-  background-color: gray;
+  color: white;
+  background-color: rgb(0, 0, 0);
   overflow: scroll;
   scrollbar-color: gray black;
 }
@@ -150,9 +151,54 @@ body {
   overflow: scroll;
 }
 
+.scroll7::-webkit-scrollbar {
+  width: 20px;
+}
+
+.scroll7::-webkit-scrollbar-button {
+  background-color: blue;
+  background-image: radial-gradient(circle, black, white, white);
+  border-radius: 10px;
+  background-size: 18px;
+  background-position: center;
+}
+
+.scroll7::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.scroll7::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.scroll7::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
 .scroll8 {
   width: 600px;
   height: 100px;
   background-color: white;
   overflow: scroll;
+  scrollbar-color: purple, red;
+}
+
+.scroll8::-webkit-scrollbar {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+}
+
+.scroll8::-webkit-scrollbar-thumb {
+  background-color: white;
+  /* border-radius: 100px; */
+  box-shadow: 0 0 5px 5px rgb(255, 255, 255), inset 0 0 2px 2px black;
+}
+
+.scroll8::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.scroll8::-webkit-scrollbar-corner {
+  background-color: black;
 }
