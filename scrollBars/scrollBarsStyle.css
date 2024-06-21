@@ -51,7 +51,7 @@ body {
   background-color: white;
   overflow: scroll;
   scrollbar-width: thin;
-  scrollbar-color: red white;
+  scrollbar-color: purple white;
 }
 
 .scroll4 {
@@ -73,12 +73,7 @@ body {
 }
 
 .scroll4::-webkit-scrollbar-thumb {
-  background-image: radial-gradient(
-    circle,
-    red,
-    rgb(209, 0, 0),
-    rgb(168, 0, 0)
-  );
+  background-image: radial-gradient(circle, red, rgb(209, 0, 0), rgb(168, 0, 0));
   border-radius: 10px;
   box-shadow: 0 0 2px 2px black;
 }
@@ -118,7 +113,7 @@ body {
   width: 20px;
 }
 
-.scroll6::-webkit-scrollbar-button {
+.scroll6.scroll9 {
   background-color: red;
   border-radius: 10px;
   border: 1px solid black;
@@ -155,7 +150,7 @@ body {
   width: 20px;
 }
 
-.scroll7::-webkit-scrollbar-button {
+.scroll7.scroll9 {
   background-color: blue;
   background-image: radial-gradient(circle, black, white, white);
   border-radius: 10px;
@@ -180,7 +175,6 @@ body {
   height: 100px;
   background-color: white;
   overflow: scroll;
-  scrollbar-color: purple, red;
 }
 
 .scroll8::-webkit-scrollbar {
@@ -191,7 +185,6 @@ body {
 
 .scroll8::-webkit-scrollbar-thumb {
   background-color: white;
-  /* border-radius: 100px; */
   box-shadow: 0 0 5px 5px rgb(255, 255, 255), inset 0 0 2px 2px black;
 }
 
