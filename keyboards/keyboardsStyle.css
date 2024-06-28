@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+/* ******** TOP NAV *********/
+
+#homeButton {
+  margin: 20px;
+}
+
+#homeButton a {
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+}
+
+#homeButton:hover {
+  cursor: pointer;
+  scale: 102%;
+  text-shadow: none;
+  box-shadow: 2px 2px black;
+}
+
+.centerContainer {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  margin-bottom: 5px;
+  margin-top: -15px;
+}
+
+.centerContainer:hover {
+  box-shadow: 2px 2px rgb(88, 88, 88);
+}
+
+#style-toggle {
+  position: relative;
+  font-size: 24px;
+  background: transparent;
+  background-image: url(../assets/backgrounds/yellowbackground.gif);
+  background-size: cover;
+}
+
+#style-toggle:hover {
+  cursor: pointer;
+  text-shadow: 1px 1px rgb(196, 196, 196);
+}
+
+/* ******** TEXT BOX *********/
+
+.text-area {
+  margin: 10px;
+  padding: 5px;
+  width: calc(100vw - 100px);
+  height: calc(100vh - 500px);
+  color: black;
+}
+
+/* ******** KEYBOARD 1 *********/
+
+.keyboard {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 5px 0;
+  background: #004134;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  transition: bottom 0.4s;
+}
+
+.keyboard--hidden {
+  bottom: -100%;
+}
+
+.keyboard__keys {
+  text-align: center;
+}
+
+.keyboard__key {
+  height: 45px;
+  width: 6%;
+  max-width: 90px;
+  margin: 3px;
+  border-radius: 4px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1.05rem;
+  outline: none;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: top;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+}
+
+.keyboard__key:active {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.keyboard__key--wide {
+  width: 12%;
+}
+
+.keyboard__key--extra--wide {
+  width: 36%;
+  max-width: 500px;
+}
+
+.keyboard__key--activatable::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 8px;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+}
+
+.keyboard__key--active::after {
+  background: #08ff00;
+}
+
+.keyboard__key--dark {
+  background: rgba(0, 0, 0, 0.25);
+}
