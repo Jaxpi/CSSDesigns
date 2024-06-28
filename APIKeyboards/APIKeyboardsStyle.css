@@ -51,8 +51,8 @@
 /* 1 */
 
 .hg-theme-default.style1 {
-  margin: 50px;
-  width: 80%;
+  margin: auto;
+  width: 90%;
   background-color: black;
   box-shadow: 1px 1px 10px 1px rgb(99, 99, 99);
 }
@@ -82,61 +82,81 @@
 /* 2 */
 
 .hg-theme-default.style2 {
-    margin: auto;
-    width: 50%;
-    background-image: linear-gradient(45deg, red, orange, yellow);
-    box-shadow: 1px 1px 10px 1px rgb(99, 99, 99);
+  margin: auto;
+  width: 50%;
+  background-image: linear-gradient(45deg, red, orange, yellow);
+  box-shadow: 1px 1px 10px 1px rgb(99, 99, 99);
 }
 
 .hg-theme-default .hg-button.style2 {
-    align-items: center;
-    background: #fff;
-    border-bottom: 1px solid #b5b5b5;
-    border-radius: 5px;
-    box-shadow: 0 0 3px -1px rgba(0, 0, 0, .3);
-    box-sizing: border-box;
-    cursor: pointer;
-    display: flex;
-    height: 40px;
-    justify-content: center;
-    padding: 5px;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  align-items: center;
+  background: #fff;
+  border-bottom: 1px solid #b5b5b5;
+  border-radius: 5px;
+  box-shadow: 0 0 3px -1px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  padding: 5px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .hg-button.style2:hover {
-    scale: 101%;
-    box-shadow: 0px 0px 5px 1px white;
+  scale: 101%;
+  box-shadow: 0px 0px 5px 1px white;
+}
+
+@media only screen and (max-width: 800px) {
+  .hg-theme-default.style2 {
+    width: 100%;
+  }
 }
 
 /* 3 */
 
 .hg-theme-default.style3 {
-    margin: auto;
-    width: 80%;
-    background-image: linear-gradient(45deg, rgb(0, 17, 255), rgb(0, 195, 255), yellow);
-    box-shadow: 1px 1px 10px 1px rgb(99, 99, 99);
+  margin: auto;
+  width: 80%;
+  background-image: linear-gradient(
+    45deg,
+    rgb(0, 17, 255),
+    rgb(0, 195, 255),
+    yellow
+  );
+  box-shadow: 1px 1px 10px 1px rgb(99, 99, 99);
 }
 
 .hg-theme-default.style3:hover {
-    scale: 110%;
+  scale: 110%;
 }
 
 .hg-theme-default .hg-button.style3 {
-    align-items: center;
-    background: #fff;
-    border-bottom: 1px solid #b5b5b5;
-    border-radius: 5px;
-    box-shadow: 0 0 3px -1px rgba(0, 0, 0, .3);
-    box-sizing: border-box;
-    cursor: pointer;
-    display: flex;
-    height: 50px;
-    justify-content: center;
-    padding: 5px;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  align-items: center;
+  background: #fff;
+  border-bottom: 1px solid #b5b5b5;
+  border-radius: 5px;
+  box-shadow: 0 0 3px -1px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  padding: 5px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .hg-button.style3:hover {
-    scale: 101%;
-    box-shadow: 0px 0px 5px 1px black;
+  scale: 101%;
+  box-shadow: 0px 0px 5px 1px black;
+}
+
+@media only screen and (max-width: 500px) {
+  .hg-theme-default.style3 {
+    width: 100%;
+  }
+  .hg-theme-default.style3:hover {
+    scale: 100%;
+  }
 }
