@@ -213,40 +213,6 @@ window.addEventListener("DOMContentLoaded", function () {
   Keyboard.init();
 });
 
-// const styleToggle = document.getElementById("style-toggle");
-// let currentStyleIndex = 0;
-
-// styleToggle.addEventListener("click", () => {
-//   const keyboard = document.querySelector(".keyboard");
-//   const keyboardKeys = document.querySelectorAll(".keyboard__key");
-
-//   for (let i = 0; i < 3; i++) {
-//     keyboard.classList.remove(`style${i + 1}`);
-//     keyboardKeys.forEach((key) => key.classList.remove(`style${i + 1}`));
-//   }
-
-//   currentStyleIndex = (currentStyleIndex + 1) % 3;
-//   const currentStyle = `style${currentStyleIndex + 1}`;
-
-// //   keyboard.classList.remove(`style${currentStyleIndex}`);
-//   keyboard.classList.add(currentStyle);
-//   keyboardKeys.forEach((key) => {
-//     // key.classList.remove(`style${currentStyleIndex}`);
-//     key.classList.add(currentStyle);
-//   });
-
-//   if (currentStyleIndex === 2) {
-//     currentStyleIndex = 0;
-//     keyboard.classList.remove(`style3`);
-//     keyboard.classList.add(`style1`);
-//     keyboardKeys.forEach((key) => {
-//       key.classList.remove(`style3`);
-//       key.classList.add(`style1`);
-//     });
-//   }
-//   console.log("current style: " + currentStyle);
-// });
-
 const styleToggle = document.getElementById("style-toggle");
 let currentStyleIndex = 0;
 

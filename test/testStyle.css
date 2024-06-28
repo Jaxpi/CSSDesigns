@@ -1,0 +1,142 @@
+#homeButton {
+  margin: 20px;
+}
+
+#homeButton a {
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+}
+
+#homeButton:hover {
+  cursor: pointer;
+  scale: 102%;
+  text-shadow: none;
+  box-shadow: 2px 2px black;
+}
+
+.centerContainer {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  margin-bottom: 5px;
+  margin-top: -15px;
+}
+
+.centerContainer:hover {
+  box-shadow: 2px 2px rgb(88, 88, 88);
+}
+
+#style-toggle {
+  position: relative;
+  font-size: 24px;
+  background: transparent;
+  background-image: url(../assets/backgrounds/yellowbackground.gif);
+  background-size: cover;
+}
+
+#style-toggle:hover {
+  cursor: pointer;
+  text-shadow: 1px 1px rgb(196, 196, 196);
+}
+
+.input {
+  margin: 50px;
+  width: 90vw;
+  height: 200px;
+}
+
+/* 1 */
+
+.hg-theme-default.style1 {
+  margin: 50px;
+  width: 80%;
+  background-color: black;
+  box-shadow: 1px 1px 10px 1px rgb(99, 99, 99);
+}
+
+.hg-theme-default .hg-button.style1 {
+  align-items: center;
+  margin: 5px;
+  background: gray;
+  color: white;
+  border-bottom: 1px solid #b5b5b5;
+  border-radius: 5px;
+  box-shadow: 0 0 3px -1px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  padding: 5px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.hg-button.style1:hover {
+  scale: 101%;
+  box-shadow: 0px 0px 5px 1px white;
+}
+
+/* 2 */
+
+.hg-theme-default.style2 {
+    margin: auto;
+    width: 50%;
+    background-image: linear-gradient(45deg, red, orange, yellow);
+    box-shadow: 1px 1px 10px 1px rgb(99, 99, 99);
+}
+
+.hg-theme-default .hg-button.style2 {
+    align-items: center;
+    background: #fff;
+    border-bottom: 1px solid #b5b5b5;
+    border-radius: 5px;
+    box-shadow: 0 0 3px -1px rgba(0, 0, 0, .3);
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    padding: 5px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.hg-button.style2:hover {
+    scale: 101%;
+    box-shadow: 0px 0px 5px 1px white;
+}
+
+/* 3 */
+
+.hg-theme-default.style3 {
+    margin: auto;
+    width: 80%;
+    background-image: linear-gradient(45deg, rgb(0, 17, 255), rgb(0, 195, 255), yellow);
+    box-shadow: 1px 1px 10px 1px rgb(99, 99, 99);
+}
+
+.hg-theme-default.style3:hover {
+    scale: 110%;
+}
+
+.hg-theme-default .hg-button.style3 {
+    align-items: center;
+    background: #fff;
+    border-bottom: 1px solid #b5b5b5;
+    border-radius: 5px;
+    box-shadow: 0 0 3px -1px rgba(0, 0, 0, .3);
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    padding: 5px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.hg-button.style3:hover {
+    scale: 101%;
+    box-shadow: 0px 0px 5px 1px black;
+}
