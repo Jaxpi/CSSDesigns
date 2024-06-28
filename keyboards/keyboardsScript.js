@@ -213,87 +213,101 @@ window.addEventListener("DOMContentLoaded", function () {
   Keyboard.init();
 });
 
-// const notesContainer = document.querySelector(".notes-container");
-// const createBtn = document.querySelector(".btn");
-// let notes = document.querySelectorAll(".input-box");
-
-// // Get references to the relevant elements
 // const styleToggle = document.getElementById("style-toggle");
-// const container = document.getElementById("container");
-// const containerH1 = document.getElementById("container-h1");
-// const containerH1Img = document.getElementById("container-h1-img");
-// const containerBtn = document.getElementById("container-button");
-// const containerBtnImg = document.getElementById("container-button-img");
-
-// // Initialize with the default style and set new style upon click event
-// let currentStyle = parseInt(localStorage.getItem("currentStyle")) || 3;
-
-// const elementsToUpdate = [
-//   notesContainer.getElementsByTagName("p"),
-//   container,
-//   containerH1,
-//   containerH1Img,
-//   containerBtn,
-//   containerBtnImg,
-// ];
-
-// function applyStyle(style) {
-//   elementsToUpdate.forEach((element) => {
-//     if (element.length >= 0) {
-//       for (i = 0; i < element.length; i++) {
-//         element[i].classList.remove("style1", "style2", "style3");
-//         element[i].classList.add(`style${style}`);
-//       }
-//     } else {
-//       element.className = `style${style}`;
-//     }
-//   });
-// }
+// let currentStyleIndex = 0;
 
 // styleToggle.addEventListener("click", () => {
-//   currentStyle = (currentStyle % 3) + 1;
-//   applyStyle(currentStyle);
-//   localStorage.setItem("currentStyle", currentStyle);
-// });
+//   const keyboard = document.querySelector(".keyboard");
+//   const keyboardKeys = document.querySelectorAll(".keyboard__key");
 
-// function showNotes() {
-//   notesContainer.innerHTML = localStorage.getItem("notes");
-// }
+//   for (let i = 0; i < 3; i++) {
+//     keyboard.classList.remove(`style${i + 1}`);
+//     keyboardKeys.forEach((key) => key.classList.remove(`style${i + 1}`));
+//   }
 
-// function updateStorage() {
-//   localStorage.setItem("notes", notesContainer.innerHTML);
-// }
+//   currentStyleIndex = (currentStyleIndex + 1) % 3;
+//   const currentStyle = `style${currentStyleIndex + 1}`;
 
-// createBtn.addEventListener("click", () => {
-//   let inputBox = document.createElement("p");
-//   let img = document.createElement("img");
-//   inputBox.className = "input-box style" + currentStyle;
-//   inputBox.setAttribute("contenteditable", "true");
-//   img.src = "../assets/deleteIcon.png";
-//   img.className = "input-box-img";
-//   notesContainer.appendChild(inputBox).appendChild(img);
-// });
+// //   keyboard.classList.remove(`style${currentStyleIndex}`);
+//   keyboard.classList.add(currentStyle);
+//   keyboardKeys.forEach((key) => {
+//     // key.classList.remove(`style${currentStyleIndex}`);
+//     key.classList.add(currentStyle);
+//   });
 
-// notesContainer.addEventListener("click", function (e) {
-//   if (e.target.tagName === "IMG") {
-//     e.target.parentElement.remove();
-//     updateStorage();
-//   } else if (e.target.tagName === "P") {
-//     notes = document.querySelectorAll(".input-box");
-//     notes.forEach((nt) => {
-//       nt.onkeyup = function () {
-//         updateStorage();
-//       };
+//   if (currentStyleIndex === 2) {
+//     currentStyleIndex = 0;
+//     keyboard.classList.remove(`style3`);
+//     keyboard.classList.add(`style1`);
+//     keyboardKeys.forEach((key) => {
+//       key.classList.remove(`style3`);
+//       key.classList.add(`style1`);
 //     });
 //   }
+//   console.log("current style: " + currentStyle);
 // });
 
-// document.addEventListener("keydown", (event) => {
-//   if (event.key === "Enter") {
-//     document.execCommand("insertLineBreak");
-//     event.preventDefault();
-//   }
-// });
+const styleToggle = document.getElementById("style-toggle");
+let currentStyleIndex = 0;
 
-// showNotes();
-// applyStyle(currentStyle);
+styleToggle.addEventListener("click", () => {
+  const keyboard = document.querySelector(".keyboard");
+  const keyboardKeys = document.querySelectorAll(".keyboard__key");
+
+  // Remove all previous styles
+  for (let i = 0; i < 3; i++) {
+    keyboard.classList.remove(`style${i + 1}`);
+    keyboardKeys.forEach((key) => key.classList.remove(`style${i + 1}`));
+  }
+
+  currentStyleIndex = (currentStyleIndex + 1) % 3;
+  const currentStyle = `style${currentStyleIndex + 1}`;
+
+  // Apply the new style
+  keyboard.classList.add(currentStyle);
+  keyboardKeys.forEach((key) => key.classList.add(currentStyle));
+
+  // Check if it's the 3rd click
+  if (currentStyleIndex === 2) {
+    // Reset to the beginning style
+    currentStyleIndex = 0;
+    keyboard.classList.remove(`style3`);
+    keyboard.classList.add(`style1`);
+    keyboardKeys.forEach((key) => {
+      key.classList.remove(`style3`);
+      key.classList.add(`style1`);
+    });
+    const styleToggle = document.getElementById("style-toggle");
+    let currentStyleIndex = 0;
+
+    styleToggle.addEventListener("click", () => {
+      const keyboard = document.querySelector(".keyboard");
+      const keyboardKeys = document.querySelectorAll(".keyboard__key");
+
+      // Remove all previous styles
+      for (let i = 0; i < 3; i++) {
+        keyboard.classList.remove(`style${i + 1}`);
+        keyboardKeys.forEach((key) => key.classList.remove(`style${i + 1}`));
+      }
+
+      currentStyleIndex = (currentStyleIndex + 1) % 3;
+      const currentStyle = `style${currentStyleIndex + 1}`;
+
+      // Apply the new style
+      keyboard.classList.add(currentStyle);
+      keyboardKeys.forEach((key) => key.classList.add(currentStyle));
+
+      // Check if it's the 3rd click
+      if (currentStyleIndex === 2) {
+        // Reset to the beginning style
+        currentStyleIndex = 0;
+        keyboard.classList.remove(`style3`);
+        keyboard.classList.add(`style1`);
+        keyboardKeys.forEach((key) => {
+          key.classList.remove(`style3`);
+          key.classList.add(`style1`);
+        });
+      }
+    });
+  }
+});

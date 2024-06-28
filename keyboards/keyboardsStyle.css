@@ -137,7 +137,7 @@
 
 /* ******** KEYBOARD 2 *********/
 
-.keyboard {
+.keyboard.style2 {
   position: fixed;
   left: 0;
   bottom: 0;
@@ -148,6 +148,27 @@
   transition: bottom 0.4s;
 }
 
+.keyboard.style2 button {
+    height: 45px;
+    width: 6%;
+    max-width: 90px;
+    margin: 3px;
+    border-radius: 4px;
+    border: 1px solid white;
+    background: rgb(0, 0, 0);
+    color: white;
+    font-size: 1.05rem;
+    outline: none;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: top;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+}
+
 .keyboard--hidden {
   bottom: -100%;
 }
@@ -156,7 +177,7 @@
   text-align: center;
 }
 
-.keyboard__key {
+.keyboard__key.style2 {
   height: 45px;
   width: 6%;
   max-width: 90px;
@@ -177,20 +198,24 @@
   position: relative;
 }
 
-.keyboard__key:active {
+.keyboard__key.style2:hover {
+    scale: 105%;
+}
+
+.keyboard__key.style2:active {
   background: rgba(255, 255, 255, 0.12);
 }
 
-.keyboard__key--wide {
+.keyboard__key--wide.style2 {
   width: 12%;
 }
 
-.keyboard__key--extra--wide {
+.keyboard__key--extra--wide.style2 {
   width: 36%;
   max-width: 500px;
 }
 
-.keyboard__key--activatable::after {
+.keyboard__key--activatable.style2::after {
   content: "";
   position: absolute;
   top: 10px;
@@ -201,17 +226,17 @@
   border-radius: 50%;
 }
 
-.keyboard__key--active::after {
+.keyboard__key--active.style2::after {
   background: #00eeff;
 }
 
-.keyboard__key--dark {
+.keyboard__key--dark.style2 {
   background: rgba(255, 255, 255, 0.25);
 }
 
 /* ******** KEYBOARD 3 *********/
 
-.keyboard {
+.keyboard.style3 {
   position: fixed;
   left: 0;
   bottom: 0;
@@ -230,7 +255,7 @@
   text-align: center;
 }
 
-.keyboard__key {
+.keyboard__key.style3 {
   height: 45px;
   width: 6%;
   max-width: 90px;
@@ -251,7 +276,7 @@
   position: relative;
 }
 
-.keyboard__key:hover {
+.keyboard__key.style3:hover {
   scale: 105%;
   color: gold;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -259,20 +284,20 @@
   box-shadow: 0px 0px 5px gold;
 }
 
-.keyboard__key:active {
+.keyboard__key.style3:active {
   background: rgba(255, 255, 255, 0.12);
 }
 
-.keyboard__key--wide {
+.keyboard__key--wide.style3 {
   width: 12%;
 }
 
-.keyboard__key--extra--wide {
+.keyboard__key--extra--wide.style3 {
   width: 36%;
   max-width: 500px;
 }
 
-.keyboard__key--activatable::after {
+.keyboard__key--activatable.style3::after {
   content: "";
   position: absolute;
   top: 10px;
@@ -283,12 +308,12 @@
   border-radius: 50%;
 }
 
-.keyboard__key--active::after {
+.keyboard__key--active.style3::after {
   background: gold;
   border: 1px solid black;
   box-shadow: 0px 0px 10px 5px gold;
 }
 
-.keyboard__key--dark {
+.keyboard__key--dark.style3 {
   background-image: radial-gradient(circle, gold 2%, black 40%);
 }
