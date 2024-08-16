@@ -1,7 +1,9 @@
 # CSS Designs
 
-https://jaxpi.github.io/DEPLOYEDLINK/
-<br><img src="assets/mainscreenshot.jpg" style="width:300px; height auto;">
+https://jaxpi.github.io/CSSDesigns/
+<br><img src="assets/imgs/cssHome1.png" style="width:300px; height auto;">
+<br><img src="assets/imgs/cssNav1.png" style="width:300px; height auto;">
+<br><img src="assets/imgs/cssAlbum1.png" style="width:300px; height auto;">
 
 
 ## Description
